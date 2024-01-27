@@ -1,6 +1,7 @@
 import 'package:dr_boutros/view/home/aqsam/asnan.dart';
 import 'package:dr_boutros/view/home/aqsam/batna.dart';
 import 'package:dr_boutros/view/home/aqsam/children.dart';
+import 'package:dr_boutros/view/home/aqsam/geldia.dart';
 import 'package:flutter/material.dart';
 
 import 'category_home.dart';
@@ -37,7 +38,7 @@ class HomePageBody extends StatelessWidget {
             text: "الباطنة والحميات",
           ),
           CategoryHome(
-            navigatorTo: Batna(),
+            navigatorTo: Geldia(),
             assetImage: 'assets/images/geldia.jpeg',
             text: 'الأمراض الجلدية',
           ),
@@ -53,6 +54,11 @@ class HomePageBody extends StatelessWidget {
           ),
           CategoryHome(
             navigatorTo: Batna(),
+            assetImage: 'assets/images/graha.jpeg',
+            text: 'الجراحة',
+          ),
+          CategoryHome(
+            navigatorTo: Batna(),
             assetImage: 'assets/images/bon.jpeg',
             text: 'العظام',
           ),
@@ -63,8 +69,18 @@ class HomePageBody extends StatelessWidget {
           ),
           CategoryHome(
             navigatorTo: Batna(),
-            assetImage: 'assets/images/graha.jpeg',
-            text: 'الجراحة',
+            assetImage: 'assets/images/3laTabi3i.jpg',
+            text: 'العلاج الطبيعي',
+          ),
+          CategoryHome(
+            navigatorTo: Batna(),
+            assetImage: 'assets/images/ayes.jpg',
+            text: 'العيون',
+          ),
+          CategoryHome(
+            navigatorTo: Batna(),
+            assetImage: 'assets/images/renal.jpg',
+            text: 'الكلى والمسالك البولية',
           ),
         ],
       ),
