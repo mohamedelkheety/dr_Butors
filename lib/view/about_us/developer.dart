@@ -1,5 +1,6 @@
 import 'package:dr_boutros/helper/custom_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Dveloper extends StatelessWidget {
   const Dveloper({super.key});
@@ -37,26 +38,39 @@ class Dveloper extends StatelessWidget {
                   fontWeight: FontWeight.bold)),
           SizedBox(
             height: 50,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/gmail (1).png',
-                  height: size * 0.04,
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                Text('mohamedelkheaty97@gmail.com',
-                    style: TextStyle(
-                      fontSize: size * 0.025,
-                      color: Colors.white,
-                    )),
-              ],
+            child: GestureDetector(
+              onTap: () {
+                _luncherUrl();
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/gmail (1).png',
+                    height: size * 0.04,
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text('mohamedelkheaty97@gmail.com',
+                      style: TextStyle(
+                        fontSize: size * 0.025,
+                        color: Colors.white,
+                      )),
+                ],
+              ),
             ),
           )
         ],
       ),
     );
   }
+
+  Future<void> _luncherUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
 }
+
+Uri _url = Uri.parse('https://flutter.dev');
