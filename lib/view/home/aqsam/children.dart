@@ -13,7 +13,7 @@ class Children extends StatelessWidget {
         drName: 'د.عبد الحليم الزيات',
         time: '10:00am-01:00pm',
         openDays: "طوال الأسبوع ماعدا الخميس والجمعة",
-        adress: 'بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+        adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
       ),
       DoctorModel(
         drName: ' د.علي رجب فتوح',

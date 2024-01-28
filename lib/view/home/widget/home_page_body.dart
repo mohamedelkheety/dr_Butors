@@ -2,6 +2,8 @@ import 'package:dr_boutros/view/home/aqsam/asnan.dart';
 import 'package:dr_boutros/view/home/aqsam/batna.dart';
 import 'package:dr_boutros/view/home/aqsam/children.dart';
 import 'package:dr_boutros/view/home/aqsam/geldia.dart';
+import 'package:dr_boutros/view/home/aqsam/geraha.dart';
+import 'package:dr_boutros/view/home/aqsam/women.dart';
 import 'package:flutter/material.dart';
 
 import 'category_home.dart';
@@ -43,7 +45,7 @@ class HomePageBody extends StatelessWidget {
             text: 'الأمراض الجلدية',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
+            navigatorTo: Women(),
             assetImage: 'assets/images/women.jpeg',
             text: 'النساء والتوليد',
           ),
@@ -53,7 +55,7 @@ class HomePageBody extends StatelessWidget {
             text: 'المخ والأعصاب',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
+            navigatorTo: Geraha(),
             assetImage: 'assets/images/graha.jpeg',
             text: 'الجراحة',
           ),

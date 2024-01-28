@@ -10,7 +10,7 @@ void customSnacBar(BuildContext context, {required String text}) {
           fontSize: MediaQuery.of(context).size.width * 0.05),
       textAlign: TextAlign.center,
     ),
-    duration: const Duration(seconds: 2),
+    duration: const Duration(seconds: 1),
     backgroundColor: kPrimaryColor,
   ));
 }

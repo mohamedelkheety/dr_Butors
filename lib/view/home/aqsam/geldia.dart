@@ -13,13 +13,14 @@ class Geldia extends StatelessWidget {
         drName: 'د.شيماء شفيق علي',
         time: '09:00am-01:00pm',
         openDays: "السبت",
-        adress: 'بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+        adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+        avatar: 'assets/images/avatar_woman.jpg',
       ),
     ];
 
     return ApsamBody(
       doctorList: doctorList,
-      title: "الجلدية",
+      title: "الأمراض الجلديّة",
     );
   }
 }

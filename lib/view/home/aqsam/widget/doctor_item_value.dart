@@ -1,6 +1,7 @@
 import 'package:dr_boutros/helper/constants.dart';
 import 'package:dr_boutros/controller/add_favorite/add_favorite_cubit.dart';
 import 'package:dr_boutros/controller/fech_favorite/fech_favorite_cubit.dart';
+import 'package:dr_boutros/helper/custom_snac_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -62,6 +63,8 @@ class DoctorItemValue extends StatelessWidget {
           onPressed: box.values.contains(doctorModel)
               ? () {
                   doctorModel.delete();
+                  customSnacBar(context, text: 'تمت الإزالة من المفضلة');
+
                   BlocProvider.of<FechFavoriteCubit>(context).fechFav();
                 }
               : () {

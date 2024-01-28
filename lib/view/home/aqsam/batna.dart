@@ -15,7 +15,7 @@ class Batna extends StatelessWidget {
         drName: 'د.أيمن مشرف',
         time: '06:30pm-11:00pm',
         openDays: "يوميًا ماعدا الجمعة",
-        adress: 'بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+        adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
       ),
       DoctorModel(
         drName: 'د.محمد أبونجيلة ',
@@ -26,14 +26,8 @@ class Batna extends StatelessWidget {
       DoctorModel(
         drName: 'د.حمدي أبوحسين',
         time: '03:30pm-11:00pm',
-        openDays: ' طوال أيام الأسبوع',
+        openDays: 'طوال أيام الأسبوع',
         adress: 'بطورس-قرية أمين باشا الكبرى -بجوار الكوبري',
-      ),
-      DoctorModel(
-        drName: 'د.محمد عبدالمولى',
-        time: '06:00pm-10:00pm',
-        openDays: 'السبت-الإثنين-الأربعاء',
-        adress: 'النميري-الكوبري-أمام المسجد الكبير ',
       ),
       DoctorModel(
         drName: 'د.محمد عطالله',
