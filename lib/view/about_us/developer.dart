@@ -67,10 +67,9 @@ class Dveloper extends StatelessWidget {
   }
 
   Future<void> _luncherUrl() async {
-    if (!await launchUrl(_url)) {
-      throw Exception('Could not launch $_url');
+    Uri url = Uri.parse('https://flutter.dev');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
     }
   }
 }
-
-Uri _url = Uri.parse('https://flutter.dev');

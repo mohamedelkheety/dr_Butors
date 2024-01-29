@@ -34,22 +34,20 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: kPrimaryColor,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.19,
-            ),
-            Image.asset(
-              'assets/images/logo.png',
-              height: MediaQuery.of(context).size.height * 0.30,
-            ),
-            AnimatedText(slideingAnimation: slideingAnimation)
-          ],
-        ),
+    return Scaffold(
+      backgroundColor: kPrimaryColor,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.24,
+          ),
+          Image.asset(
+            'assets/images/logo.png',
+            height: MediaQuery.of(context).size.height * 0.30,
+          ),
+          AnimatedText(slideingAnimation: slideingAnimation)
+        ],
       ),
     );
   }
