@@ -31,7 +31,7 @@ class ApsamBody extends StatelessWidget {
             appBar: AppBar(
                 centerTitle: true,
                 backgroundColor: kPrimaryColor,
-                title: CustomAppBar(
+                title: CustomTextAppBar(
                   title: title,
                 )),
             body: ListView.builder(

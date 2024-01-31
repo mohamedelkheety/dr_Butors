@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key,
-    required this.title,
-    this.color = Colors.black,
-  });
+class CustomTextAppBar extends StatelessWidget {
+  const CustomTextAppBar(
+      {super.key,
+      required this.title,
+      this.color = Colors.black,
+      this.customSize = 0.09});
   final String title;
   final Color color;
+  final double customSize;
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -15,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
       textAlign: TextAlign.center,
       style: TextStyle(
         color: color,
-        fontSize: MediaQuery.of(context).size.width * 0.09,
+        fontSize: MediaQuery.of(context).size.width * customSize,
       ),
     );
   }

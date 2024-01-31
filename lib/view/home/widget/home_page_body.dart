@@ -19,7 +19,7 @@ class HomePageBody extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const CustomAppBar(
+        title: const CustomTextAppBar(
           title: 'أطِبَّاء بطُورس',
         ),
       ),

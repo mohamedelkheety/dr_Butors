@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 
+import '../../../../helper/custom_text.dart';
 import '../../../../model/doctor_model.dart';
 
 class DoctorItemValue extends StatelessWidget {
@@ -76,17 +77,6 @@ class DoctorItemValue extends StatelessWidget {
               : customText(size.width * 0.04, text: 'إضافة إلى المفضلة'),
         )
       ],
-    );
-  }
-
-  Text customText(double size, {required String text}) {
-    return Text(
-      text,
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        fontSize: size,
-        fontWeight: FontWeight.bold,
-      ),
     );
   }
 }
