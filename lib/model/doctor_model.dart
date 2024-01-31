@@ -16,7 +16,7 @@ class DoctorModel extends HiveObject {
   final String adress;
 
   DoctorModel({
-    this.avatar = 'assets/images/logo.png',
+    this.avatar = 'assets/images/avatarman.png',
     required this.drName,
     required this.time,
     required this.openDays,

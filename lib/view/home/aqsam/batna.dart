@@ -24,6 +24,12 @@ class Batna extends StatelessWidget {
         adress: 'بطورس-سوق أجيون-أعلى صيدلية د.محمد فرحات',
       ),
       DoctorModel(
+        drName: 'د.علي العزومي',
+        time: '11:00am-3:30pm',
+        openDays: "يوميًا ماعدا الخميس والجمعة",
+        adress: 'بطورس-سوق أجيون-أعلى البريد المصري ',
+      ),
+      DoctorModel(
         drName: 'د.حمدي أبوحسين',
         time: '03:30pm-11:00pm',
         openDays: 'طوال أيام الأسبوع',
@@ -34,6 +40,18 @@ class Batna extends StatelessWidget {
         time: '02:30pm-09:00pm',
         openDays: 'يوميًا ماعدا الجمعة',
         adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
+      ),
+      DoctorModel(
+        drName: 'د.رجب حرفوش',
+        time: '011:00am-07:00pm',
+        openDays: 'يوميًا ماعدا الجمعة',
+        adress: "بلقطر الشرقيه-بجوار حلواني البنا",
+      ),
+      DoctorModel(
+        drName: 'د.محمود مصطفي',
+        time: '011:00am-07:00pm',
+        openDays: 'السبت-الأحد-الإثنين',
+        adress: "بلقطر الشرقيه-أمام معمل اليسر",
       )
     ];
 

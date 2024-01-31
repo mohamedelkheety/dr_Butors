@@ -5,7 +5,7 @@ class CustomTextAppBar extends StatelessWidget {
       {super.key,
       required this.title,
       this.color = Colors.black,
-      this.customSize = 0.09});
+      this.customSize = 0.08});
   final String title;
   final Color color;
   final double customSize;

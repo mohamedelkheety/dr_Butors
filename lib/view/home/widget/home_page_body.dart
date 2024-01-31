@@ -1,8 +1,15 @@
 import 'package:dr_boutros/view/home/aqsam/asnan.dart';
 import 'package:dr_boutros/view/home/aqsam/batna.dart';
+import 'package:dr_boutros/view/home/aqsam/bon.dart';
 import 'package:dr_boutros/view/home/aqsam/children.dart';
+import 'package:dr_boutros/view/home/aqsam/elag_tabe3y.dart';
+import 'package:dr_boutros/view/home/aqsam/eyes.dart';
 import 'package:dr_boutros/view/home/aqsam/geldia.dart';
 import 'package:dr_boutros/view/home/aqsam/geraha.dart';
+import 'package:dr_boutros/view/home/aqsam/kidney.dart';
+import 'package:dr_boutros/view/home/aqsam/nerves.dart';
+import 'package:dr_boutros/view/home/aqsam/ta5atob.dart';
+import 'package:dr_boutros/view/home/aqsam/taghzia.dart';
 import 'package:dr_boutros/view/home/aqsam/women.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +27,7 @@ class HomePageBody extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const CustomTextAppBar(
-          title: 'أطِبَّاء بطُورس',
+          title: 'أطِبَّاء بطُورس وبلَقطَر',
         ),
       ),
       body: ListView(
@@ -50,17 +57,12 @@ class HomePageBody extends StatelessWidget {
             text: 'النساء والتوليد',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
-            assetImage: 'assets/images/brian.jpeg',
-            text: 'المخ والأعصاب',
-          ),
-          CategoryHome(
             navigatorTo: Geraha(),
             assetImage: 'assets/images/graha.jpeg',
             text: 'الجراحة',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
+            navigatorTo: Bon(),
             assetImage: 'assets/images/bon.jpeg',
             text: 'العظام',
           ),
@@ -70,19 +72,34 @@ class HomePageBody extends StatelessWidget {
             text: 'الأسنان',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
+            navigatorTo: Eyes(),
+            assetImage: 'assets/images/eyes.jpg',
+            text: 'العيون',
+          ),
+          CategoryHome(
+            navigatorTo: Ta5atob(),
+            assetImage: 'assets/images/ta5atob.jpg',
+            text: "التخاطب",
+          ),
+          CategoryHome(
+            navigatorTo: Nerves(),
+            assetImage: 'assets/images/nerves.jpeg',
+            text: 'المخ والأعصاب',
+          ),
+          CategoryHome(
+            navigatorTo: Elagtabi3y(),
             assetImage: 'assets/images/3laTabi3i.jpg',
             text: 'العلاج الطبيعي',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
-            assetImage: 'assets/images/ayes.jpg',
-            text: 'العيون',
+            navigatorTo: Kidney(),
+            assetImage: 'assets/images/kidney.jpg',
+            text: 'الكلى والمسالك البولية',
           ),
           CategoryHome(
-            navigatorTo: Batna(),
-            assetImage: 'assets/images/renal.jpg',
-            text: 'الكلى والمسالك البولية',
+            navigatorTo: Taghzia(),
+            assetImage: 'assets/images/taghzia.jpg',
+            text: 'التغذية العلاجية والسمنة',
           ),
         ],
       ),

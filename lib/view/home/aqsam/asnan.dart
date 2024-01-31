@@ -15,6 +15,30 @@ class Asnan extends StatelessWidget {
         openDays: "يوميًا ماعدا الجمعة",
         adress: 'بطورس-سوق أجيون-أمام مركز الشباب',
       ),
+      DoctorModel(
+        drName: 'د.عمرو هشام',
+        time: '11:30am-5:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: 'بطورس-محجر العرقان-أعلى صيدلية د.محمد فرحات',
+      ),
+      DoctorModel(
+        drName: 'د.علاء أبونجيلة',
+        time: '11:30am-7:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
+      ),
+      DoctorModel(
+        drName: "د.أحمد كمال",
+        time: '11:30am-6:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: "بلقطر الشرقية-بجوار حلواني البنا",
+      ),
+      DoctorModel(
+        drName: "مركز الفتح",
+        time: '03:00pm-8:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: "بلقطر الشرقية-أعلى صيدلية د.محمد شرف",
+      ),
     ];
 
     return ApsamBody(

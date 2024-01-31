@@ -10,16 +10,22 @@ class Geraha extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<DoctorModel> doctorList = [
       DoctorModel(
+        drName: 'د.محمد عبدالمولى',
+        time: '06:00pm-10:00pm',
+        openDays: 'السبت-الإثنين-الأربعاء',
+        adress: 'النميري-الكوبري-أمام المسجد الكبير ',
+      ),
+      DoctorModel(
         drName: 'د.محمد الديب',
         time: '05:00pm-10:00pm',
         openDays: "يوميًا ماعدا الإثنين والجمعة",
         adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
       ),
       DoctorModel(
-        drName: 'د.محمد عبدالمولى',
-        time: '06:00pm-10:00pm',
-        openDays: 'السبت-الإثنين-الأربعاء',
-        adress: 'النميري-الكوبري-أمام المسجد الكبير ',
+        drName: 'د.محمود طه',
+        time: '05:00pm-10:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: "بلقطر الشرقية-بجوار صيدلية د.محمد موسى",
       ),
     ];
 

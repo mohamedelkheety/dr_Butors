@@ -11,22 +11,10 @@ class Women extends StatelessWidget {
     final List<DoctorModel> doctorList = [
       DoctorModel(
         drName: 'د.مروة عاشور',
-        time: '09:00am-01:00pm',
-        openDays: "يوميًا ماعدا الأحد والأربعاء والجمعة",
+        time: '11:00am-02:00pm',
+        openDays: 'السبت-الأثنين-الخميس',
         adress: 'بطورس-سوق أجيون-أعلى صيدلية الشرقان2-بجوار البنزينة',
         avatar: 'assets/images/avatar_woman.jpg',
-      ),
-      DoctorModel(
-        drName: 'د.محمد الديب',
-        time: '05:00pm-10:00pm',
-        openDays: "يوميًا ماعدا الإثنين والجمعة",
-        adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
-      ),
-      DoctorModel(
-        drName: 'د.خيري الشويعر',
-        time: '11:00am-5:00pm',
-        openDays: 'الأحد والأربعاء',
-        adress: 'بطورس-محجر العرقان-أعلى صيدلية د.أحمد زيد',
       ),
       DoctorModel(
         drName: 'د.عبير العشماوي',
@@ -37,11 +25,29 @@ class Women extends StatelessWidget {
       ),
       DoctorModel(
         drName: 'د.رشا صقر ',
-        time: '02:30pm-09:00pm',
+        time: '04:00pm-09:00pm',
         openDays: 'يوميًا ماعدا الجمعة',
         adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
         avatar: 'assets/images/avatar_woman.jpg',
-      )
+      ),
+      DoctorModel(
+        drName: 'د.خيري الشويعر',
+        time: '11:00am-5:00pm',
+        openDays: 'الأحد والأربعاء',
+        adress: 'بطورس-محجر العرقان-أعلى صيدلية د.أحمد زيد',
+      ),
+      DoctorModel(
+        drName: 'د.محمد الديب',
+        time: '05:00pm-09:00pm',
+        openDays: "يوميًا ماعدا الإثنين والجمعة",
+        adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+      ),
+      DoctorModel(
+        drName: "د.محمود فوزي",
+        time: '09:00am-09:00pm',
+        openDays: "يوميًا ماعدا الجمعة",
+        adress: "بلقطرالشرقيه-بجوار الوحدة الصحة",
+      ),
     ];
 
     return ApsamBody(
