@@ -1,6 +1,6 @@
-# dr_boutros
+# dr_boutors&Blqter
 
-A new Flutter project.
+A new Flutter project by:Mohamed Elkheety.
 
 ## Getting Started
 
