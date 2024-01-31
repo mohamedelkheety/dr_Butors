@@ -32,9 +32,9 @@ class Dveloper extends StatelessWidget {
           ),
           customText(size * 0.04,
               text: 'Dev:Mohamed Elkheety', color: Colors.white),
-          const Divider(
-            indent: 70,
-            endIndent: 70,
+          Divider(
+            indent: size * 0.09,
+            endIndent: size * 0.09,
             color: Colors.white,
           ),
           customText(size * 0.02,
