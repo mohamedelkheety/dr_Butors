@@ -29,7 +29,7 @@ class DoctorItemValue extends StatelessWidget {
           radius: size.height * 0.09,
           backgroundImage: AssetImage(doctorModel.avatar),
         ),
-        customText(size.width * 0.09, text: doctorModel.drName),
+        customText(size.width * 0.08, text: doctorModel.drName),
         customText(size.width * 0.05, text: doctorModel.time),
         const SizedBox(
           height: 5,

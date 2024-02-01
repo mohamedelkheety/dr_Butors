@@ -15,11 +15,17 @@ class Kidney extends StatelessWidget {
         openDays: 'الإثنين-الخميس',
         adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
       ),
+      DoctorModel(
+        drName: 'د.محمد عبدالناصر',
+        time: '02:30pm-5:00pm',
+        openDays: "أجازة مؤقتة",
+        adress: 'بطورس-محجر العرقان-أعلى صيدلية د.محمد فرحات',
+      ),
     ];
 
     return ApsamBody(
       doctorList: doctorList,
-      title: "الكلى والمسالك البولية",
+      title: 'الكُلى والمسالك',
     );
   }
 }

@@ -32,9 +32,9 @@ class CategoryHome extends StatelessWidget {
         width: double.infinity,
         child: Center(
           child: Text(text,
-              style: const TextStyle(
+              style: TextStyle(
                   color: Colors.white,
-                  fontSize: 35,
+                  fontSize: MediaQuery.of(context).size.width * 0.09,
                   fontWeight: FontWeight.bold)),
         ),
       ),

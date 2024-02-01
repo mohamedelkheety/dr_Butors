@@ -20,7 +20,7 @@ class Taghzia extends StatelessWidget {
 
     return ApsamBody(
       doctorList: doctorList,
-      title: 'التغذية العلاجية والسمنة',
+      title: 'التغذية العلاجية',
     );
   }
 }

@@ -92,14 +92,14 @@ class HomePageBody extends StatelessWidget {
             text: 'العلاج الطبيعي',
           ),
           CategoryHome(
-            navigatorTo: Kidney(),
-            assetImage: 'assets/images/kidney.jpg',
-            text: 'الكلى والمسالك البولية',
-          ),
-          CategoryHome(
             navigatorTo: Taghzia(),
             assetImage: 'assets/images/taghzia.jpg',
-            text: 'التغذية العلاجية والسمنة',
+            text: 'التغذية العلاجية',
+          ),
+          CategoryHome(
+            navigatorTo: Kidney(),
+            assetImage: 'assets/images/kidney.jpg',
+            text: 'الكُلى والمسالك',
           ),
         ],
       ),

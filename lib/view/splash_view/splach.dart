@@ -14,7 +14,7 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(builder: (context) {
         return const HomePage();
