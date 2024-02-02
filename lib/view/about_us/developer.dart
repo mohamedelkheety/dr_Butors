@@ -58,7 +58,7 @@ class Dveloper extends StatelessWidget {
                 IconButton(
                     onPressed: () {
                       _luncherUrl(
-                          urlLink: 'https://mail.google.com/mail/u/0/#inbox');
+                          urlLink: 'mailto:mohamedelkheaty97@gmail.com');
                     },
                     icon: Icon(
                       Icons.email,
