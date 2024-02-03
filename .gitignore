@@ -41,3 +41,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+**/android/app/key.jks
+**/android/key.properties
+**/android/app/build.gradle
+**/xyzkeystore
+**/lib/view/about_us/developer.dart
