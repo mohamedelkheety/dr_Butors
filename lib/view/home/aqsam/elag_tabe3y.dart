@@ -14,6 +14,7 @@ class Elagtabi3y extends StatelessWidget {
         time: '10:00am-3:00pm',
         openDays: "يوميًا ماعدا الخميس والجمعة",
         adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
+        avatar: 'assets/images/avatar_woman.jpg',
       ),
       DoctorModel(
         drName: ' د.عبدالرحمن درويش',
