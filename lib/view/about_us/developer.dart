@@ -74,7 +74,7 @@ class Dveloper extends StatelessWidget {
   Future<void> _luncherUrl({required String urlLink}) async {
     Uri url = Uri.parse(urlLink);
     if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
+      return;
     }
   }
 }
