@@ -24,12 +24,6 @@ class Batna extends StatelessWidget {
         adress: 'بطورس-سوق أجيون-أعلى صيدلية د.محمد فرحات',
       ),
       DoctorModel(
-        drName: 'د.علي العزومي',
-        time: '11:00am-3:30pm',
-        openDays: "يوميًا ماعدا الخميس والجمعة",
-        adress: 'بطورس-سوق أجيون-أعلى البريد المصري ',
-      ),
-      DoctorModel(
         drName: 'د.حمدي أبوحسين',
         time: '03:30pm-11:00pm',
         openDays: 'طوال أيام الأسبوع',

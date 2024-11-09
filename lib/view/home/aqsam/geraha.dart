@@ -22,6 +22,12 @@ class Geraha extends StatelessWidget {
         adress: '1بطورس-سوق أجيون-أعلى صيدلية الشرقان',
       ),
       DoctorModel(
+        drName: 'د.عزمي صبري الدقن',
+        time: '03:00pm-9:00pm',
+        openDays: "يوميًا ماعدا الأحد والجمعة",
+        adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
+      ),
+      DoctorModel(
         drName: 'د.محمود طه',
         time: '05:00pm-10:00pm',
         openDays: "يوميًا ماعدا الجمعة",

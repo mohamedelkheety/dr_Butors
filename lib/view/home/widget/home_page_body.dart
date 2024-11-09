@@ -11,6 +11,8 @@ import 'package:dr_boutros/view/home/aqsam/nerves.dart';
 import 'package:dr_boutros/view/home/aqsam/ta5atob.dart';
 import 'package:dr_boutros/view/home/aqsam/taghzia.dart';
 import 'package:dr_boutros/view/home/aqsam/women.dart';
+import 'package:dr_boutros/view/home/aqsam/nose.dart';
+
 import 'package:flutter/material.dart';
 
 import 'category_home.dart';
@@ -60,6 +62,11 @@ class HomePageBody extends StatelessWidget {
             navigatorTo: Geraha(),
             assetImage: 'assets/images/graha.jpeg',
             text: 'الجراحة',
+          ),
+          CategoryHome(
+            navigatorTo: NoseAndEar(),
+            assetImage: 'assets/images/Allergic-Rhinitis.png',
+            text: 'الأنف والأذن',
           ),
           CategoryHome(
             navigatorTo: Bon(),
