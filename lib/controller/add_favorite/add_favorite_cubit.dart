@@ -7,8 +7,8 @@ import 'package:hive/hive.dart';
 
 part 'add_favorite_state.dart';
 
-class AddFavoriteCubit extends Cubit<AddFavoriteState> {
-  AddFavoriteCubit() : super(AddFavoriteInitial());
+class AddToFavoriteCubit extends Cubit<AddFavoriteState> {
+  AddToFavoriteCubit() : super(AddFavoriteInitial());
 
   Future addFav(DoctorModel doctorModel) async {
     try {

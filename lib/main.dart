@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => AddFavoriteCubit(),
+            create: (context) => AddToFavoriteCubit(),
           ),
           BlocProvider(
             create: (context) => FechFavoriteCubit(),

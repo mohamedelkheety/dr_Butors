@@ -18,7 +18,7 @@ class ApsamBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<AddFavoriteCubit, AddFavoriteState>(
+    return BlocListener<AddToFavoriteCubit, AddFavoriteState>(
         listener: (context, state) {
           if (state is AddFavoriteSuccess) {
             customSnacBar(context, text: 'تمت الإضافة إلى المفضلة');

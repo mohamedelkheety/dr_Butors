@@ -69,7 +69,7 @@ class DoctorItemValue extends StatelessWidget {
                   BlocProvider.of<FechFavoriteCubit>(context).fechFav();
                 }
               : () {
-                  BlocProvider.of<AddFavoriteCubit>(context)
+                  BlocProvider.of<AddToFavoriteCubit>(context)
                       .addFav(doctorModel);
                 },
           child: box.values.contains(doctorModel)
