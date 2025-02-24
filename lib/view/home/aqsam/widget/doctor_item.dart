@@ -1,4 +1,4 @@
-import 'package:dr_boutros/model/doctor_model.dart';
+import 'package:dr_boutros/models/doctor_model.dart';
 import 'package:dr_boutros/view/home/aqsam/widget/doctor_item_value.dart';
 import 'package:flutter/material.dart';
 

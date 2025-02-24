@@ -1,4 +1,4 @@
-import '../../../../model/doctor_model.dart';
+import '../../models/doctor_model.dart';
 
 class DoctorsListsInBoutros {
   static List<DoctorModel> asnanDoctorsList = [

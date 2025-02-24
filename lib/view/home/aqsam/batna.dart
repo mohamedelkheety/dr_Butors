@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dr_boutros/doctors_lists/doctors_lists.dart';
+import 'package:dr_boutros/data/doctors_lists/doctors_lists.dart';
 
 import 'widget/apsam_body.dart';
 

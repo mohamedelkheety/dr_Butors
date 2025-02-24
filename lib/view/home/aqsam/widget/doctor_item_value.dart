@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 
 import '../../../../helper/custom_text.dart';
-import '../../../../model/doctor_model.dart';
+import '../../../../models/doctor_model.dart';
 
 class DoctorItemValue extends StatelessWidget {
   const DoctorItemValue({

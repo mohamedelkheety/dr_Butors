@@ -1,6 +1,6 @@
 import 'package:dr_boutros/helper/constants.dart';
 import 'package:dr_boutros/controller/fech_favorite/fech_favorite_cubit.dart';
-import 'package:dr_boutros/model/doctor_model.dart';
+import 'package:dr_boutros/models/doctor_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +20,7 @@ class Favotrite extends StatelessWidget {
           backgroundColor: kPrimaryColor,
           title: const CustomAppBarWithIcon(
             iconPath: 'assets/images/bookmark_9969448.png',
-            title: 'المفضلة',
+            title: 'المُفَضَّلَة',
           ),
         ),
         body: BlocBuilder<FechFavoriteCubit, FechFavoriteState>(

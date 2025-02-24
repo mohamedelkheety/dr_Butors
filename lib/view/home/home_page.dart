@@ -1,4 +1,5 @@
 import 'package:dr_boutros/view/about_us/developer.dart';
+import 'package:dr_boutros/view/articles/articles_view.dart';
 import 'package:dr_boutros/view/favorite/favorite.dart';
 import 'package:flutter/material.dart';
 
@@ -11,13 +12,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-int currentIndex = 2;
+int currentIndex = 3;
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
+          showUnselectedLabels: true,
           iconSize: 30,
           currentIndex: currentIndex,
           onTap: (index) {
@@ -31,20 +33,24 @@ class _HomePageState extends State<HomePage> {
           unselectedItemColor: Colors.black,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.contact_support,
-                ),
-                label: 'من نحن؟'),
+              icon: Icon(
+                Icons.contact_support,
+              ),
+              label: 'مَنْ نَحن؟',
+            ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.favorite,
                 ),
-                label: 'المفضلة'),
+                label: 'المُفَضَّلَة'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.medication_liquid_rounded),
+                label: 'مَقَالاتٌ'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
                 ),
-                label: 'الرئيسية'),
+                label: 'الرَّئِيسيَّة'),
           ],
         ),
         body: screenViewIndex(currentIndex));
@@ -52,8 +58,10 @@ class _HomePageState extends State<HomePage> {
 }
 
 Widget screenViewIndex(int index) {
-  if (index == 2) {
+  if (index == 3) {
     return const HomePageBody();
+  } else if (index == 2) {
+    return const ArticlesView();
   } else if (index == 1) {
     return const Favotrite();
   }

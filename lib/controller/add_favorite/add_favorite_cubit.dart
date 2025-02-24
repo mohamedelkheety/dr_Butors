@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dr_boutros/helper/constants.dart';
-import 'package:dr_boutros/model/doctor_model.dart';
+import 'package:dr_boutros/models/doctor_model.dart';
 import 'package:hive/hive.dart';
 
 part 'add_favorite_state.dart';

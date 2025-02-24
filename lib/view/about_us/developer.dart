@@ -17,7 +17,7 @@ class Dveloper extends StatelessWidget {
             centerTitle: true,
             title: const CustomTextAppBar(
               color: Colors.white,
-              title: 'مَن نحن؟',
+              title: 'مَنْ نَحن؟',
             )),
         body: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           SizedBox(
