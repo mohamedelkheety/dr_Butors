@@ -46,3 +46,5 @@ app.*.map.json
 **/android/app/build.gradle
 **/xyzkeystore
 **/lib/view/about_us/developer.dart
+**/lib/adMob/ad_manger.dart
+**/android/app/src/main/AndroidManifest.xml

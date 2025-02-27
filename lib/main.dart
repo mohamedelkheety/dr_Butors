@@ -7,8 +7,12 @@ import 'package:dr_boutros/view/splash_view/splach.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+
   await Hive.initFlutter();
   Hive.registerAdapter(DoctorModelAdapter());
   await Hive.openBox<DoctorModel>(kDocBox);
