@@ -15,22 +15,23 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
   BannerAd? bannerAd;
   bool isLoaded = false;
   void loadAd() async {
-    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-        MediaQuery.sizeOf(context).width.truncate());
+    // final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+    //     MediaQuery.sizeOf(context).width.truncate());
 
     bannerAd = BannerAd(
       adUnitId: AdManager.bannerId,
       request: const AdRequest(),
-      size: size ?? AdSize.banner,
+      size: AdSize.banner,
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          debugPrint('$ad loaded.');
+          debugPrint('$ad /////////////////loaded.');
           setState(() {
             isLoaded = true;
           });
         },
         onAdFailedToLoad: (ad, err) {
-          debugPrint('BannerAd failed to load: $err');
+          debugPrint(
+              '///////////////////////////////////////////////////////////BannerAd failed to load: $err');
           ad.dispose();
         },
       ),
