@@ -1,5 +1,6 @@
 import 'package:dr_boutros/adMob/ad_manger.dart';
 import 'package:dr_boutros/models/articles_model.dart';
+import 'package:dr_boutros/view/ads/banner_container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -57,13 +58,7 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
             spacing: 5,
             textDirection: TextDirection.rtl,
             children: [
-              if (isLoaded)
-                Container(
-                  alignment: Alignment.center,
-                  width: bannerAd!.size.width.toDouble(),
-                  height: bannerAd!.size.height.toDouble(),
-                  child: AdWidget(ad: bannerAd!),
-                ),
+              if (isLoaded) BannerContainer(bannerAd: bannerAd),
               Text(
                 textDirection: TextDirection.rtl,
                 widget.articlesModel.title,
