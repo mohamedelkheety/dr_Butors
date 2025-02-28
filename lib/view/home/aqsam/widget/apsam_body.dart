@@ -7,8 +7,8 @@ import 'package:dr_boutros/view/home/aqsam/widget/doctor_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ApsamBody extends StatelessWidget {
-  const ApsamBody({
+class AqsamBody extends StatelessWidget {
+  const AqsamBody({
     super.key,
     required this.doctorList,
     required this.title,

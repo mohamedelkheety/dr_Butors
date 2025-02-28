@@ -30,8 +30,7 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
           });
         },
         onAdFailedToLoad: (ad, err) {
-          debugPrint(
-              '///////////////////////////////////////////////////////////BannerAd failed to load: $err');
+          debugPrint('//////////BannerAd failed to load: $err');
           ad.dispose();
         },
       ),
@@ -41,6 +40,7 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
   @override
   void initState() {
     loadAd();
+
     super.initState();
   }
 

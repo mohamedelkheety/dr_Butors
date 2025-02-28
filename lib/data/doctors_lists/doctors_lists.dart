@@ -71,6 +71,21 @@ class DoctorsListsInBoutros {
       adress: "بلقطر الشرقيه-أمام معمل اليسر",
     )
   ];
+  static List<DoctorModel> nervesDoctorsList = [
+    DoctorModel(
+      drName: 'د.صبري عبداللطيف',
+      time: '04:00pm-06:00pm',
+      openDays: "السبت-الأربعاء",
+      adress: 'النميري-بجوار المدرسة الإعدادية',
+    ),
+    DoctorModel(
+      drName: 'د.رماح البهي',
+      time: '10:00am-01:00pm',
+      openDays: "الأربعاء",
+      adress: 'نجع أولاد عيسى-الكوبري-بجوار معمل الأمين',
+    ),
+  ];
+
   static List<DoctorModel> bonDoctorsList = [
     DoctorModel(
       drName: 'د.مصطفى قيقي',
