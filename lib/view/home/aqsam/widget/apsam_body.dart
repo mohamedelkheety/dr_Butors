@@ -1,3 +1,4 @@
+import 'package:dr_boutros/adMob/ad_manger.dart';
 import 'package:dr_boutros/controller/add_favorite/add_favorite_cubit.dart';
 import 'package:dr_boutros/helper/constants.dart';
 import 'package:dr_boutros/helper/custom_app_bar.dart';
@@ -6,6 +7,7 @@ import 'package:dr_boutros/models/doctor_model.dart';
 import 'package:dr_boutros/view/home/aqsam/widget/doctor_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AqsamBody extends StatelessWidget {
   const AqsamBody({
