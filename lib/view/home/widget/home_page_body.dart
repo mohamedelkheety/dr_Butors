@@ -20,7 +20,6 @@ class HomePageBody extends StatefulWidget {
 
 class _HomePageBodyState extends State<HomePageBody> {
   InterstitialAd? interstitialAd;
-  bool interstitialAdLoaded = false;
 
   void loadAd() {
     InterstitialAd.load(

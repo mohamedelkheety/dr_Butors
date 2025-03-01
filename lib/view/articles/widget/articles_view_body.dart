@@ -29,6 +29,8 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
           setState(() {
             isLoaded = true;
           });
+          bannerAd?.dispose;
+          debugPrint('$ad /////////////////dispose.');
         },
         onAdFailedToLoad: (ad, err) {
           debugPrint('//////////BannerAd failed to load: $err');
