@@ -20,45 +20,40 @@ class HomePageBody extends StatefulWidget {
 
 class _HomePageBodyState extends State<HomePageBody> {
   InterstitialAd? interstitialAd;
-
+  bool interstitialIsLoaded = false;
   void loadAd() {
     InterstitialAd.load(
-        adUnitId: AdManager.interstitialId,
-        request: const AdRequest(),
-        adLoadCallback: InterstitialAdLoadCallback(
-          // Called when an ad is successfully received.
-          onAdLoaded: (ad) {
-            ad.fullScreenContentCallback = FullScreenContentCallback(
-                // Called when the ad showed the full screen content.
-                onAdShowedFullScreenContent: (ad) {},
-                // Called when an impression occurs on the ad.
-                onAdImpression: (ad) {},
-                // Called when the ad failed to show full screen content.
-                onAdFailedToShowFullScreenContent: (ad, err) {
-                  // Dispose the ad here to free resources.
-                  ad.dispose();
-                },
-                // Called when the ad dismissed full screen content.
-                onAdDismissedFullScreenContent: (ad) {
-                  // Dispose the ad here to free resources.
-                  setState(() {
-                    interstitialAd = ad;
-                  });
-                },
-                // Called when a click is recorded for an ad.
-                onAdClicked: (ad) {});
-
-            debugPrint('$ad *****loaded.*****');
-            interstitialAd?.dispose();
-            debugPrint('$ad *****dispose.*****');
-            // Keep a reference to the ad so you can show it later.
+      adUnitId: AdManager.interstitialId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) {
+          debugPrint('InterstitialAd Loaded');
+          setState(() {
             interstitialAd = ad;
-          },
-          // Called when an ad request failed.
-          onAdFailedToLoad: (LoadAdError error) {
-            debugPrint('InterstitialAd failed to load: $error');
-          },
-        ));
+            interstitialIsLoaded = true;
+          });
+          ad.fullScreenContentCallback = FullScreenContentCallback(
+            onAdDismissedFullScreenContent: (ad) {
+              ad.dispose();
+              loadAd(); // تحميل إعلان جديد بعد إغلاق الإعلان الحالي
+            },
+            onAdFailedToShowFullScreenContent: (ad, error) {
+              ad.dispose();
+              setState(() {
+                interstitialAd = null;
+                interstitialIsLoaded = false;
+              });
+            },
+          );
+        },
+        onAdFailedToLoad: (LoadAdError error) {
+          debugPrint('InterstitialAd failed to load: $error');
+          setState(() {
+            interstitialIsLoaded = false;
+          });
+        },
+      ),
+    );
   }
 
   @override
@@ -66,6 +61,12 @@ class _HomePageBodyState extends State<HomePageBody> {
     loadAd();
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    interstitialAd?.dispose();
+    super.dispose();
   }
 
   @override
@@ -82,7 +83,12 @@ class _HomePageBodyState extends State<HomePageBody> {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              interstitialAd?.show();
+              if (interstitialIsLoaded && interstitialAd != null) {
+                interstitialAd?.show();
+                interstitialIsLoaded = false;
+                interstitialAd = null;
+              }
+
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return AqsamBody(
                     doctorList: AqsamLists.aqsamListsAll[index],

@@ -16,21 +16,23 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
   BannerAd? bannerAd;
   bool isLoaded = false;
   void loadAd() async {
-    // final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-    //     MediaQuery.sizeOf(context).width.truncate());
-
+    final size = await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+      MediaQuery.of(context).size.width.truncate(),
+    );
+    if (size == null) {
+      debugPrint("🚨 لم يتمكن من الحصول على حجم الإعلان المناسب.");
+      return;
+    }
     bannerAd = BannerAd(
       adUnitId: AdManager.bannerId,
       request: const AdRequest(),
-      size: AdSize.banner,
+      size: size,
       listener: BannerAdListener(
         onAdLoaded: (ad) {
-          debugPrint('$ad /////////////////loaded.');
+          debugPrint('$ad تم التحمييييييل');
           setState(() {
             isLoaded = true;
           });
-          bannerAd?.dispose;
-          debugPrint('$ad /////////////////dispose.');
         },
         onAdFailedToLoad: (ad, err) {
           debugPrint('//////////BannerAd failed to load: $err');
@@ -40,10 +42,22 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
     )..load();
   }
 
+  // @override
+  // void initState() {
+  //   loadAd();
+  //   super.initState();
+  // }
+
   @override
-  void initState() {
-    loadAd();
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    loadAd(); // 🔥 يتم استدعاؤه بعد أن يصبح context جاهزًا
+  }
+
+  @override
+  void dispose() {
+    bannerAd?.dispose();
+    super.dispose();
   }
 
   @override
@@ -61,12 +75,13 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
                   spacing: 5,
                   textDirection: TextDirection.rtl,
                   children: [
-                    if (isLoaded) BannerContainer(bannerAd: bannerAd),
                     Text(
                       textDirection: TextDirection.rtl,
                       widget.articlesModel.title,
                       style: TextStyle(fontSize: size * 0.05),
                     ),
+                    if (isLoaded && bannerAd != null)
+                      BannerContainer(bannerAd: bannerAd),
                     Image.asset(widget.articlesModel.image),
                     SelectableText(
                       textAlign: TextAlign.justify,
@@ -82,10 +97,7 @@ class _ArticlesViewBodyState extends State<ArticlesViewBody> {
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: InkWell(
                   onTap: () {
-                    setState(() {
-                      bannerAd?.dispose();
-                      Navigator.of(context).pop();
-                    });
+                    Navigator.of(context).pop();
                   },
                   child: Icon(Icons.arrow_back_ios)),
             ),
