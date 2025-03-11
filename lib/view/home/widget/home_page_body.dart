@@ -35,7 +35,7 @@ class _HomePageBodyState extends State<HomePageBody> {
           ad.fullScreenContentCallback = FullScreenContentCallback(
             onAdDismissedFullScreenContent: (ad) {
               ad.dispose();
-              loadAd(); // تحميل إعلان جديد بعد إغلاق الإعلان الحالي
+              loadAd(); 
             },
             onAdFailedToShowFullScreenContent: (ad, error) {
               ad.dispose();
